@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").css("color","purple").click(function(){
+        $("#panel").css("color","purple").slideUp(2000).slideDown(4000);
+    });
+        $("#stop").click(function(){
+        $("#panel").stop();
+    });
+});
+$(document).ready(function(){
+$("#2").click(function(){
+$("p").hide(1000);
+$("p").show(1000);
+});
+});
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        alert( $("#test").text());
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<p id="test" style="color:white">超級推薦!!!!</p>
+<button id="btn1">按我</button>
+<button id="2">Click me</button>
+<p><img src= "C:\Users\YEE\Desktop\1-32-1000x600.jpg" width="1000" height="600" ></p>
+ <button id="stop">Stop sliding</button>
+<div id="flip">你的名子(請按)</div>
+<div id="panel">現在熱映中</div>
+
+</body>
+</html>
